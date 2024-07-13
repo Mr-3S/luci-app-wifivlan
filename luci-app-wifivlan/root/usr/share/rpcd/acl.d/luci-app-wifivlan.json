@@ -1,0 +1,29 @@
+{
+    "luci-app-wifivlan": {
+      "description": "Grant UCI access to LuCI wifi vlan",
+      "read": {
+        "ubus": {
+          "uci": [
+            "get"
+          ]
+        },
+        "uci": [
+          "wireless"
+        ],
+        "file":{
+          "/usr/bin/qrencode --inline --8bit --type=SVG --output=- *" : [ "exec" ]
+        }
+      },
+      "write": {
+        "ubus": {
+          "uci": [
+            "set", "commit"
+          ]
+        },
+        "uci": [
+          "wireless"
+        ]
+      }
+    }
+  }
+  

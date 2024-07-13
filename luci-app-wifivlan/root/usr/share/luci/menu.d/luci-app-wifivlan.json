@@ -1,0 +1,31 @@
+{
+    "admin/network/wifivlan": {
+      "title": "Wi-Fi VLAN",
+      "order": 60,
+      "action": {
+        "type": "firstchild"
+      },
+      "depends": {
+        "acl": [ "luci-app-wifivlan" ]
+      }
+    },
+  
+    "admin/network/wifivlan/vlan": {
+      "title": "VLAN",
+      "order": 1,
+      "action": {
+        "type": "view",
+        "path": "wifivlan/vlan"
+      }
+    },
+  
+    "admin/network/wifivlan/station": {
+      "title": "Station",
+      "order": 2,
+      "action": {
+        "type": "view",
+        "path": "wifivlan/station"
+      }
+    }
+  }
+  
